@@ -27,36 +27,4 @@ The plugin includes a copy of the Sauce Connect Jar file.  When the administrati
 
 Once the authentication details have been entered and saved on the `Configure System` screen, you can then enable Sauce OnDemand support on the Configuration screen for a Jenkins Job.
 
-
-Freestyle/Maven projects
-
-To configure the Sauce OnDemand settings for a Jenkins Job, select the `Configure` link on a Job 
-
-![Job Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/job-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
-
-The Sauce OnDemand support for a Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
-
-![Sauce Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/sauce-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
-
-By selecting the `Enable Sauce Connect?` check box, the Sauce plugin will launch an instance of [Sauce Connect](http://saucelabs.com/docs/sauce-connect) prior to the running of your Job.  This instance will be closed when the Job completes.
-
-Sauce OnDemand supports a wide range of browsers, but some browser combinations are only supported for SeleniumRC or WebDriver tests.  The multi-select lists beneath the `SeleniumRC` and `WebDriver` radio buttons are populated by retrieving the list of respective supported browsers via the Sauce REST API.
-
-If the `SeleniumRC` radio button is selected, then a `Starting URL` field will be displayed.
-
-The plugin will set a series of environment variables based on the information provided on the Job Configuration. These environment variables can either be explicitly referenced by your unit tests, or through the use of the [selenium-client-factory] library.
-
-* SELENIUM_HOST - The hostname of the Selenium server
-* SELENIUM_PORT - The port of the Selenium server
-* SELENIUM_PLATFORM - The operating system of the selected browser
-* SELENIUM_VERSION - The version number of the selected browser
-* SELENIUM_BROWSER - The browser string.
-* SELENIUM_URL - The initial URL to load when the test begins
-* SAUCE_USER_NAME - The user name used to invoke Sauce OnDemand
-* SAUCE_API_KEY - The access key for the user used to invoke Sauce OnDemand
-
-Note: These values are set automatically by the Jenkins plugin. If you are using Sauce Connect, SELENIUM_HOST and SELENIUM_PORT are set to ondemand.saucelabs.com:4445, such that all communication with our browsers is encrypted.
-
-Multi-configuration projects
-
-* _Next_: [ Sauce Jenkins plugin](https://github.com/saucelabs/java-tutorial/blob/master/03-Configuration.md)
+* _Next_: [Jenkins Job Configuration](https://github.com/saucelabs/java-tutorial/blob/master/04-Job-Configuration.md)
