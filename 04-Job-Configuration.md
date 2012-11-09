@@ -8,7 +8,7 @@ To configure the Sauce OnDemand settings for a Jenkins Job, select the `Configur
 
 ![Job Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/job-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
 
-The Sauce OnDemand support for a Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
+The Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
 ![Sauce Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/sauce-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
 
@@ -16,7 +16,22 @@ By selecting the `Enable Sauce Connect?` check box, the Sauce plugin will launch
 
 Sauce OnDemand supports a wide range of browsers, but some browser combinations are only supported for SeleniumRC or WebDriver tests.  The multi-select lists beneath the `SeleniumRC` and `WebDriver` radio buttons are populated by retrieving the list of respective supported browsers via the Sauce REST API.
 
-If a single browser is selected, then the `SELENIUM_PLATFORM`, `SELENIUM_VERSION`, `SELENIUM_BROWSER` and ``
+If a single browser is selected, then the `SELENIUM_PLATFORM`, `SELENIUM_VERSION`, `SELENIUM_BROWSER` and `SELENIUM_DRIVER` environment variables will be populated to contain the details of the selected browser.  If multiple browsers are selected, then the `SELENIUM_BROWSER` environment variable will be populated with a JSON-formatted string containing the attributes of the selected browsers.  An example of the JSON string is:
+
+```json
+
+[{
+	"platform":"LINUX",
+	"os":"Linux",
+	"browser":"firefox",
+	"url":"sauce-ondemand:?os=Linux&browser=firefox&browser-version=16","browser-version":"16"},
+{
+	"platform":"VISTA",
+	"os":"Windows 2008",
+	"browser":"iexploreproxy",
+	"url":"sauce-ondemand:?os=Windows 2008&browser=iexploreproxy&browser-version=9",
+	"browser-version":"9"}]
+```
 
 If the `SeleniumRC` radio button is selected, then a `Starting URL` field will also be displayed.
 
@@ -45,3 +60,4 @@ The values for the `SELENIUM_HOST` and `SELENIUM_PORT` environment variables can
 Multi-configuration projects
 ---
 
+* _Next_: [Integration with tests](https://github.com/saucelabs/java-tutorial/blob/master/04-Integration-with-tests.md)
