@@ -20,34 +20,39 @@ If a single browser is selected, then the `SELENIUM_PLATFORM`, `SELENIUM_VERSION
 
 ```json
 
-[{
+[
+	{
 	"platform":"LINUX",
 	"os":"Linux",
 	"browser":"firefox",
-	"url":"sauce-ondemand:?os=Linux&browser=firefox&browser-version=16","browser-version":"16"},
-{
+	"url":"sauce-ondemand:?os=Linux&browser=firefox&browser-version=16",
+	"browser-version":"16"
+	},
+	{
 	"platform":"VISTA",
 	"os":"Windows 2008",
 	"browser":"iexploreproxy",
 	"url":"sauce-ondemand:?os=Windows 2008&browser=iexploreproxy&browser-version=9",
-	"browser-version":"9"}]
+	"browser-version":"9"
+	}
+]
 ```
 
 If the `SeleniumRC` radio button is selected, then a `Starting URL` field will also be displayed.
 
 The plugin will set a series of environment variables based on the information provided on the Job Configuration. These environment variables can either be explicitly referenced by your unit tests, or through the use of the [selenium-client-factory] library.
 
-* SELENIUM_HOST - The hostname of the Selenium server
-* SELENIUM_PORT - The port of the Selenium server
-* SELENIUM_PLATFORM - The operating system of the selected browser
-* SELENIUM_VERSION - The version number of the selected browser
-* SELENIUM_BROWSER - The browser name of the selected browser.
-* SELENIUM_DRIVER - Contains the operating system, version and browser name of the selected browser, in a format designed for use by the [Selenium Client Factory]()
-* SAUCE_ONDEMAND_BROWSERS - A JSON-formatted string representing the selected browsers
-* SELENIUM_URL - The initial URL to load when the test begins
-* SAUCE_USER_NAME - The user name used to invoke Sauce OnDemand
-* SAUCE_API_KEY - The access key for the user used to invoke Sauce OnDemand
-* SELENIUM_STARTING_URL - The value of the `Starting URL` field
+* `SELENIUM_HOST` - The hostname of the Selenium server
+* `SELENIUM_PORT` - The port of the Selenium server
+* `SELENIUM_PLATFORM` - The operating system of the selected browser
+* `SELENIUM_VERSION` - The version number of the selected browser
+* `SELENIUM_BROWSER` - The browser name of the selected browser.
+* `SELENIUM_DRIVER` - Contains the operating system, version and browser name of the selected browser, in a format designed for use by the [Selenium Client Factory]()
+* `SAUCE_ONDEMAND_BROWSERS` - A JSON-formatted string representing the selected browsers
+* `SELENIUM_URL` - The initial URL to load when the test begins
+* `SAUCE_USER_NAME` - The user name used to invoke Sauce OnDemand
+* `SAUCE_API_KEY` - The access key for the user used to invoke Sauce OnDemand
+* `SELENIUM_STARTING_URL` - The value of the `Starting URL` field
 
 By default, the plugin will use the authentication details specified in the Jenkins administration section.  However, this can be overriden at the Job level by enabling the `Override default authentication?` checkbox and specifying values in the `Username` and `Access key` fields.
 
