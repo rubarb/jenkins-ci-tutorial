@@ -5,22 +5,22 @@ The Sauce OnDemand plugin for Jenkins can be installed through the Jenkins Admin
 
 To access this page, click `Manage Jenkins` from the left-hand navigation pane.
 
-![Manage Jenkins](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/manage-jenkins.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Manage Jenkins](##manage-jenkins.png##)
 
 Then click on the `Manage Plugins` link:
 
-![Manage Plugins](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/manage-plugins.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Manage Plugins](##manage-plugins.png##)
 
 Select the `Available` tab:
 
-![Available Tab](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/available-tab.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Available Tab](##available-tab.png##)
 
 Scroll down the list of plugins to find the `Sauce OnDemand plugin`, select the check box and click the `Download and install after restart` buton:
 
-![Install Plugin](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/install-plugin.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Install Plugin](##install-plugin.png##)
 
 This will download the Sauce OnDemand plugin for Jenkins.  The plugin file is quite large, so the download may take some time to complete.  Select the `Restart Jenkins when installation is complete and no jobs are running`, and when the download has finished, the Jenkins instance will restart.
 
-![Restart Jenkins](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/restart-jenkins.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Restart Jenkins](##restart-jenkins.png##)
 
-* _Next_: [Configuring the Sauce Jenkins plugin](https://github.com/saucelabs/java-tutorial/blob/master/03-Configuration.md)
+* _Next_: [Configuring the Sauce Jenkins plugin](##03-Configuration.md##)

@@ -6,11 +6,11 @@ Freestyle/Maven projects
 
 To configure the Sauce OnDemand settings for a Jenkins Job, select the `Configure` link on a Job 
 
-![Job Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/job-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Job Configure](##job-configure.png?##)
 
 The Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
-![Sauce Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/sauce-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Sauce Configure](##sauce-configure.png##)
 
 By selecting the `Enable Sauce Connect?` check box, the Sauce plugin will launch an instance of [Sauce Connect](http://saucelabs.com/docs/sauce-connect) prior to the running of your Job.  This instance will be closed when the Job completes.
 
@@ -55,9 +55,9 @@ Note: These values are set automatically by the Jenkins plugin. If the `Enable S
 
 The values for the `SELENIUM_HOST` and `SELENIUM_PORT` environment variables can be overridden by explicitly specifying the host and port in the `Sauce OnDemand Host` and `Sauce OnDemand Port` fields, which can be displayed by clicking on the `Sauce Connect Advanced Options` button.
 
-![Sauce Configure](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/sauce-configure.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Sauce Configure](##sauce-configure.png##)
 
 Multi-configuration projects
 ---
 
-* _Next_: [Integration with tests](https://github.com/saucelabs/java-tutorial/blob/master/04-Integration-with-tests.md)
+* _Next_: [Integration with tests](##04-Integration-with-tests.md##)

@@ -5,15 +5,15 @@ After the Sauce plugin has been installed, the username and access key of the Sa
 
 To configure the authentication, first click `Manage Jenkins` from the left-hand navigation pane.
 
-![Manage Jenkins](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/manage-jenkins.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Manage Jenkins](##manage-jenkins.png##)
 
 Click the `Configure System` link
 
-![Configure System](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/configure-system.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Configure System](##configure-system.png##)
 
 Scroll down to the `Sauce OnDemand` section.
 
-![Sauce Admin](https://raw.github.com/saucelabs/jenkins-ci-tutorial/master/sauce-admin.png?login=saucelabs&token=de87203126c9a522d34c0cc90bb50dc3)
+![Sauce Admin](##sauce-admin.png##)
 
 This section contains the fields required to configure how the authentication for the Sauce plugin.  Enter the values of the username and access key you wish the Sauce plugin to use in the `Username` and `API Access Key fields`.  
 
@@ -27,4 +27,4 @@ The plugin includes a copy of the Sauce Connect Jar file.  When the administrati
 
 Once the authentication details have been entered and saved on the `Configure System` screen, you can then enable Sauce OnDemand support on the Configuration screen for a Jenkins Job.
 
-* _Next_: [Jenkins Job Configuration](https://github.com/saucelabs/java-tutorial/blob/master/04-Job-Configuration.md)
+* _Next_: [Jenkins Job Configuration](##04-Job-Configuration.md##)
