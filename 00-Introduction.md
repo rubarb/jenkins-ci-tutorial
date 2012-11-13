@@ -14,4 +14,5 @@ Table of Contents
 * [Configuring the Sauce Jenkins plugin](##03-Configuration.md##)
 * [Jenkins Job Configuration](##04-Job-Configuration.md##)
 * [Integration with tests](##04-Integration-with-tests.md##)
+* [Multi-configuration Jobs](##04-Multi-configuration.md##)
 * [Troubleshooting issues with the plugin](##07-Troubleshooting.md##)

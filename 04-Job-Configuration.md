@@ -4,15 +4,37 @@ Jenkins Job Configuration
 Freestyle/Maven projects
 ---
 
-To configure the Sauce OnDemand settings for a Jenkins Job, select the `Configure` link on a Job 
+To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyle project.
 
-![Job Configure](##job-configure.png?##)
+From the Jenkins dashboard page, click `New Job`
 
-The Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
+![New Job](##new-job.png?##)
+
+Enter 'Sauce Java Demo' in the Job Name field and select `Build a free-style software project`.
+
+![New Freestyle Project](##new-freestyle-project.png?##)
+
+Our sample code is located in [github](https://github.com/rossrowe/sauce-ci-java-demo), so select `Git` in the `Source Code Management` section, enter `https://github.com/rossrowe/sauce-ci-java-demo` as the repository URL and enter `master` in the branch specifier.
+
+![Git Setup](##git-setup.png?##)
+
+Now let's add a build step which will run our tests.  Click on the `Add Build Step` menu in the `Build` section, and select `Invoke top-level Maven targets`
+
+![Invoke Maven](##invoke-maven.png?##)
+
+Enter `test` in the `Goals` field.
+
+![Maven Goals](##maven-goal.png?##)
+
+Now let's enable the Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
 ![Sauce Configure](##sauce-configure.png##)
 
-By selecting the `Enable Sauce Connect?` check box, the Sauce plugin will launch an instance of [Sauce Connect](http://saucelabs.com/docs/sauce-connect) prior to the running of your Job.  This instance will be closed when the Job completes.
+Select the `Enable Sauce Connect?` check box.  When selected, the Sauce plugin will launch an instance of [Sauce Connect](http://saucelabs.com/docs/sauce-connect) prior to the running of your Job.  This instance will be closed when the Job completes.
+
+Click on the `WebDriver` radio button and select a browser to run our tests against (let's pick Firefox 15 running in Windows 2008)
+
+
 
 Sauce OnDemand supports a wide range of browsers, but some browser combinations are only supported for SeleniumRC or WebDriver tests.  The multi-select lists beneath the `SeleniumRC` and `WebDriver` radio buttons are populated by retrieving the list of respective supported browsers via the Sauce REST API.
 
@@ -62,21 +84,6 @@ The values for the `SELENIUM_HOST` and `SELENIUM_PORT` environment variables can
 
 ![Sauce Configure](##sauce-configure.png##)
 
-Multi-configuration projects
----
-
-Jenkins [Multi-configuration projects](https://wiki.jenkins-ci.org/display/JENKINS/Building+a+matrix+project) allow you to run the same build with different input parameters.  The Sauce plugin for Jenkins provides an additional option for multi-configuration projects to specify the browser combination for each build.
-
-To configure this on a multi-configuration job, click on the `Add Axis` button and select either the `Sauce OnDemand WebDriver tests` or `Sauce OnDemand SeleniumRC tests' item.  
-
-![Sauce Configure](##multi-config-matrix.png##)
-
-This will present a list of browser combinations that are supported by Sauce Labs for WebDriver and SeleniumRC.
-
-![WebDriver browsers](##sauce-matrix-webdriver.png##)
-
-For each selected browsers, a separate job will run when the build is invoked.  This job will include  `SELENIUM_PLATFORM`, `SELENIUM_VERSION`, `SELENIUM_BROWER`, and `SELENIUM_DRIVER` system properties which will be set to the corresponding browser.
-
 Embedding Sauce Reports
 ---
 
@@ -90,8 +97,10 @@ From the pop-up menu, select the `Publish JUnit test result report` option.
 
 ![JUnit Post-build action](##junit-post-build-action##)
 
-Enter the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
+Enter `target/surefire-reports/*.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
 
 ![Embed Sauce Reports](##embed-sauce-reports##)
+
+That's it, our configuration is all setup, let's run the tests!
 
 * _Next_: [Integration with tests](##04-Integration-with-tests.md##)

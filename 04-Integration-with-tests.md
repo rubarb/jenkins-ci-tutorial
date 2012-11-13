@@ -1,7 +1,31 @@
 Integrating tests with the Jenkins Sauce OnDemand plugin
 =============
 
-In order to make the most use out of the Sauce Jenkins plugin, the following steps should be performed:
+To run the tests, click the `Build Now` link on the Job navigation pane.  This should compile and run three tests.
+
+Once the build has finished, navigate to the Build Summary page.
+
+![Sauce Build Summary](##sauce-build-summary.png##)
+
+On this page, you will see that links to the Sauce Jobs executed as part of the build are listed. 
+
+![Sauce Summary Links](##sauce-summary-links.png##)
+
+Clicking on one of the links will present a page containing the Sauce report, which will allow you to view the steps performed and watch a video of the test.
+
+![Sauce Report](##sauce-report.png##)
+
+The embedded Sauce reports can also be displayed on the individual test result pages. To view these, click on the `Test Result` link.
+
+![Sauce Test Result](##sauce-test-result.png##)
+
+Navigate to individual test result, and the embedded report will be displayed with the test details.
+
+![Sauce Embed Test Result](##sauce-embed-test-result.png##)
+
+That's it, we've successfully configured Jenkins to run our tests against Sauce OnDemand!
+
+To summarise, in order to make the most use out of the Sauce Jenkins plugin, the following steps should be performed:
 
 * Update tests to reference the environment variables set by the plugin
 * Output the Sauce session id to the stdout to allow the Sauce plugin to associate test results to Sauce Jobs 
@@ -44,3 +68,5 @@ private void printSessionId() {
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s", (((RemoveWebDriver) driver).getSessionId()).toString(), "some job name");
         System.out.println(message);
     }
+
+* _Next_: [Multi-configuration projects](##05-Multi-configuration.md##)
