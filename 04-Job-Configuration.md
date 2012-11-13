@@ -65,4 +65,33 @@ The values for the `SELENIUM_HOST` and `SELENIUM_PORT` environment variables can
 Multi-configuration projects
 ---
 
+Jenkins [Multi-configuration projects](https://wiki.jenkins-ci.org/display/JENKINS/Building+a+matrix+project) allow you to run the same build with different input parameters.  The Sauce plugin for Jenkins provides an additional option for multi-configuration projects to specify the browser combination for each build.
+
+To configure this on a multi-configuration job, click on the `Add Axis` button and select either the `Sauce OnDemand WebDriver tests` or `Sauce OnDemand SeleniumRC tests' item.  
+
+![Sauce Configure](##multi-config-matrix.png##)
+
+This will present a list of browser combinations that are supported by Sauce Labs for WebDriver and SeleniumRC.
+
+![WebDriver browsers](##sauce-matrix-webdriver.png##)
+
+For each selected browsers, a separate job will run when the build is invoked.  This job will include  `SELENIUM_PLATFORM`, `SELENIUM_VERSION`, `SELENIUM_BROWER`, and `SELENIUM_DRIVER` system properties which will be set to the corresponding browser.
+
+Embedding Sauce Reports
+---
+
+The plugin also supports the embedding of Sauce Job reports within the display of test results.  This requires the tests executed by the Jenkins job to produce result files in the [JUnit XML]() report format. 
+
+To enable this, select the `Add post-build Action` within the `Post-build Actions` section. 
+
+![Add Post-build action](##post-build-action.png##)
+
+From the pop-up menu, select the `Publish JUnit test result report` option.
+
+![JUnit Post-build action](##junit-post-build-action##)
+
+Enter the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
+
+![Embed Sauce Reports](##embed-sauce-reports##)
+
 * _Next_: [Integration with tests](##04-Integration-with-tests.md##)
