@@ -1,9 +1,6 @@
 Jenkins Job Configuration
 =============
 
-Freestyle/Maven projects
----
-
 To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyle project.
 
 From the Jenkins dashboard page, click `New Job`
@@ -34,7 +31,7 @@ Select the `Enable Sauce Connect?` check box.  When selected, the Sauce plugin w
 
 Click on the `WebDriver` radio button and select a browser to run our tests against (let's pick Firefox 15 running in Windows 2008)
 
-
+![Sauce Configure](##sauce-configure.png##)
 
 Sauce OnDemand supports a wide range of browsers, but some browser combinations are only supported for SeleniumRC or WebDriver tests.  The multi-select lists beneath the `SeleniumRC` and `WebDriver` radio buttons are populated by retrieving the list of respective supported browsers via the Sauce REST API.
 

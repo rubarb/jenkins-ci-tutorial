@@ -1,7 +1,7 @@
 Configuring the Jenkins Sauce OnDemand plugin
 =============
 
-After the Sauce plugin has been installed, the username and access key of the Sauce OnDemand user account must be entered.
+After the Sauce plugin has been installed, the username and access key of the Sauce OnDemand user account must be entered within the Jenkins administration interface.
 
 To configure the authentication, first click `Manage Jenkins` from the left-hand navigation pane.
 

@@ -12,3 +12,5 @@ This will present a list of browser combinations that are supported by Sauce Lab
 ![WebDriver browsers](##sauce-matrix-webdriver.png##)
 
 For each selected browsers, a separate job will run when the build is invoked.  This job will include `SELENIUM_PLATFORM`, `SELENIUM_VERSION`, `SELENIUM_BROWER`, and `SELENIUM_DRIVER` system properties which will be set to the corresponding browser.
+
+* _Next_: [Troubleshooting](##07-Troubleshooting.md##)

@@ -1,4 +1,4 @@
-Next steps and more information
+Troubleshooting
 ======
 
 The source code for the plugin is available from [github](https://github.com/jenkinsci/sauce-ondemand-plugin)

@@ -69,4 +69,14 @@ private void printSessionId() {
         System.out.println(message);
     }
 
+Selenium Client Factory
+---
+An alternative to explicitly referencing the environment variables in your test code is to use the [Selenium Client Factory]() library.  This allows you to construct your SeleniumRC or WebDriver instances in a single line, eg.
+
+```java
+WebDriver webDriver = SeleniumFactory.createWebDriver();
+```
+
+Implementations of the library exist for [Java](https://github.com/infradna/selenium-client-factory) and [Python](http://sauceio.com/index.php/2012/01/selenium-client-factory-for-python/)
+
 * _Next_: [Multi-configuration projects](##05-Multi-configuration.md##)
