@@ -1,7 +1,7 @@
-Jenkins Job Configuration
+Jenkins Configuration for a Java-based Project
 =============
 
-To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyle project.
+To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyle project for a Java project.
 
 From the Jenkins dashboard page, click `New Job`
 
