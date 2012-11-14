@@ -47,7 +47,7 @@ From the pop-up menu, select the `Publish JUnit test result report` option.
 
 Enter `target/NoseXUnit/core/*.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
 
-![Embed Sauce Reports](##embed-sauce-reports##)
+![Embed Sauce Reports](##embed-nose-reports##)
 
 That's it, our configuration is all setup, let's run the tests! 
 
