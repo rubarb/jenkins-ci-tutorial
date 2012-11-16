@@ -1,11 +1,11 @@
 Jenkins Configuration for a Python-based Project
 =============
 
-To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyle project for a Python project.
+Now let's create a new Jenkins Freestyle project for a Python project.
 
 The test results will need to be in the [JUnit XML format]() in order for them to be displayed in Jenkins user interface and so that the Sauce plugin can parse the results.  There are several Python libraries which can produce the appropriate XML output, for this tutorial we are going to use [NoseXUnit](http://nosexunit.sourceforge.net/).
 
-From the Jenkins dashboard page, click `New Job`
+From the Jenkins dashboard page, click `New Job`.
 
 ![New Job](##new-job.png?##)
 
