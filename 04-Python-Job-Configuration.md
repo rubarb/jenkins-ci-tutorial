@@ -7,23 +7,23 @@ The test results will need to be in the [JUnit XML format]() in order for them t
 
 From the Jenkins dashboard page, click `New Job`.
 
-![New Job](##new-job.png?##)
+![New Job](##new-job.png##)
 
 Enter 'Sauce Java Demo' in the Job Name field and select `Build a free-style software project`.
 
-![New Freestyle Project](##new-freestyle-project.png?##)
+![New Freestyle Project](##new-freestyle-project.png##)
 
 Our sample code is located in [github](https://github.com/rossrowe/sauce-ci-python-demo), so select `Git` in the `Source Code Management` section, enter `https://github.com/rossrowe/sauce-ci-python-demo` as the repository URL and enter `master` in the branch specifier.
 
-![Git Setup](##git-setup.png?##)
+![Git Setup](##git-setup.png##)
 
 Now let's add a build step which will run our tests.  Click on the `Add Build Step` menu in the `Build` section, and select `Execute Shell`
 
-![Execute Shell](##execute-shell.png?##)
+![Execute Shell](##execute-shell.png##)
 
 Enter `nosetests --with-nosexunit simple_test.py` in the `Command` field.
 
-![Nose command](##nose-command.png?##)
+![Nose command](##nose-command.png##)
 
 Now let's enable the Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
@@ -43,11 +43,11 @@ To enable this, select the `Add post-build Action` within the `Post-build Action
 
 From the pop-up menu, select the `Publish JUnit test result report` option.
 
-![JUnit Post-build action](##junit-post-build-action##)
+![JUnit Post-build action](##junit-post-build-action.png##)
 
 Enter `target/NoseXUnit/core/*.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
 
-![Embed Sauce Reports](##embed-nose-reports##)
+![Embed Sauce Reports](##embed-nose-reports.png##)
 
 That's it, our configuration is all setup, let's run the tests! 
 

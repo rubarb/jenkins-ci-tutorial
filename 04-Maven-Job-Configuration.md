@@ -5,19 +5,19 @@ The setup for Maven projects is essentially the same as for Freestyle projects, 
 
 From the Jenkins dashboard page, click `New Job`
 
-![New Job](##new-job.png?##)
+![New Job](##new-job.png##)
 
 Enter 'Sauce Java Maven Demo' in the Job Name field and select `Build a maven 2/3 project`.
 
-![New Freestyle Project](##new-maven-project.png?##)
+![New Freestyle Project](##new-maven-project.png##)
 
 Our sample code is located in [github](https://github.com/rossrowe/sauce-ci-java-demo), so select `Git` in the `Source Code Management` section, enter `https://github.com/rossrowe/sauce-ci-java-demo` as the repository URL and enter `master` in the branch specifier.
 
-![Git Setup](##git-setup.png?##)
+![Git Setup](##git-setup.png##)
 
 Enter `test` in the `Goals and options` field.
 
-![Maven Goals](##maven-goal-option.png?##)
+![Maven Goals](##maven-goal-option.png##)
 
 Now let's enable the Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
@@ -33,7 +33,7 @@ To enable the embedding of Sauce OnDemand reports for test results, select the `
 
 Select the `Add post-build Action` action again, and select the `Additional test report feature` option, and check the `Embed Sauce OnDemand reports` checkbox.
 
-![Maven Post-build action](##maven-post-build##)
+![Maven Post-build action](##maven-post-build.png##)
 
 That's it, our configuration is all setup, let's run the tests!
 
