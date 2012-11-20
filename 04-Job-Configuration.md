@@ -92,11 +92,11 @@ To enable this, select the `Add post-build Action` within the `Post-build Action
 
 From the pop-up menu, select the `Publish JUnit test result report` option.
 
-![JUnit Post-build action](##junit-post-build-action##)
+![JUnit Post-build action](##junit-post-build-action.png##)
 
 Enter `target/surefire-reports/*.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
 
-![Embed Sauce Reports](##embed-sauce-reports##)
+![Embed Sauce Reports](##embed-sauce-reports.png##)
 
 That's it, our configuration is all setup, let's run the tests!
 
