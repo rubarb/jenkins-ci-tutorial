@@ -5,23 +5,23 @@ To demonstrate the Sauce plugin for Jenkins, let's create a new Jenkins Freestyl
 
 From the Jenkins dashboard page, click `New Job`
 
-![New Job](##new-job.png?##)
+![New Job](##new-job.png##)
 
 Enter 'Sauce Java Demo' in the Job Name field and select `Build a free-style software project`.
 
-![New Freestyle Project](##new-freestyle-project.png?##)
+![New Freestyle Project](##new-freestyle-project.png##)
 
 Our sample code is located in [github](https://github.com/rossrowe/sauce-ci-java-demo), so select `Git` in the `Source Code Management` section, enter `https://github.com/rossrowe/sauce-ci-java-demo` as the repository URL and enter `master` in the branch specifier.
 
-![Git Setup](##git-setup.png?##)
+![Git Setup](##git-setup.png##)
 
 Now let's add a build step which will run our tests.  Click on the `Add Build Step` menu in the `Build` section, and select `Invoke top-level Maven targets`
 
-![Invoke Maven](##invoke-maven.png?##)
+![Invoke Maven](##invoke-maven.png##)
 
 Enter `test` in the `Goals` field.
 
-![Maven Goals](##maven-goal.png?##)
+![Maven Goals](##maven-goal.png##)
 
 Now let's enable the Sauce OnDemand support for a Jenkins Job can be enabled by checking the `Sauce OnDemand Support` checkbox.
 
