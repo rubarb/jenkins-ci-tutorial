@@ -21,7 +21,7 @@ Now let's add a build step which will run our tests.  Click on the `Add Build St
 
 ![Execute Shell](##execute-shell.png##)
 
-Enter `nosetests --with-nosexunit simple_test.py` in the `Command` field.
+Enter `nosetests -s --with-xunit simple_test.py` in the `Command` field.
 
 ![Nose command](##nose-command.png##)
 
@@ -45,7 +45,7 @@ From the pop-up menu, select the `Publish JUnit test result report` option.
 
 ![JUnit Post-build action](##junit-post-build-action.png##)
 
-Enter `target/NoseXUnit/core/*.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
+Enter `nosetests.xml` as the path to the test reports that are produced by your Jenkins Job, and check the `Embed Sauce OnDemand reports` checkbox.
 
 ![Embed Sauce Reports](##embed-nose-reports.png##)
 
